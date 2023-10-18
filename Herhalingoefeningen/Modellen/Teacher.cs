@@ -6,7 +6,13 @@ using System.Threading.Tasks;
 
 namespace Herhalingoefeningen.Modellen
 {
-    internal class Teacher
+    internal class Teacher : Person
     {
+        public string Subject { get; set; }
+
+        public override string GetFullName()
+        {
+            return $"Teacher: {base.GetFullName()}";
+        }
     }
 }
